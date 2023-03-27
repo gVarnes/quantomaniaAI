@@ -1,0 +1,369 @@
+.page {
+  &__main {
+  }
+  &__problems {
+  }
+}
+
+.main {
+  position: relative;
+  padding-top: 216px;
+  padding-bottom: 295px;
+  height: 100%;
+  &__container {
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: $mobile) {
+      gap: rem(20);
+    }
+  }
+
+  &__body {
+    @media (min-width: $mobile) {
+      max-width: 66.034%;
+    }
+  }
+  &__form-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @media (min-width: $mobile) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: calc((490 / 1210) * 100%);
+    }
+  }
+  &__form {
+  }
+
+  &__video-actions {
+    display: inline-block;
+    width: 125px;
+    aspect-ratio: 1;
+    background-color: #0d2b6d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      transform: translateX(25%);
+    }
+  }
+
+  &__notation {
+    @media (min-width: $mobile) {
+      max-width: 54.546%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__clients {
+  }
+}
+.body-main {
+  color: $whiteColor;
+  @media (min-width: $mobile) {
+    margin-bottom: rem(232);
+  }
+
+  @media (max-width: $mobile) {
+    text-align: center;
+  }
+  &__title {
+    font-size: rem(50);
+    line-height: math.div(50.5, 50);
+    text-transform: uppercase;
+    font-family: OrchideaPro, sans-serif;
+    font-weight: 500;
+    min-height: 222px;
+    @media (max-width: $mobileSmall) {
+      font-size: rem(30);
+    }
+    span {
+      display: block;
+      color: $orangeColor;
+      @media (min-width: $mobile) {
+        max-width: calc((700 / 799) * 100%);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(35);
+    }
+    @media (max-width: $mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(2);
+      }
+    }
+  }
+
+  &__text {
+    font-size: rem(30);
+    line-height: math.div(35, 30);
+    @media (min-width: $mobile) {
+      max-width: calc((623 / 799) * 100%);
+    }
+  }
+}
+
+.form-main {
+  width: 100%;
+  background-color: rgba(13, 43, 109, 0.8);
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 50px 45px 59px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @media (max-width: $mobileSmall) {
+    padding: 25px 20px 29px;
+  }
+  @media (min-width: $mobile) {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background-color: #ffffff;
+    }
+  }
+
+  &__title {
+    color: $orangeColor;
+    font-size: rem(30);
+    line-height: 100%;
+    align-self: center;
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+  & > *:not(:last-child) {
+    margin-bottom: rem(20);
+  }
+
+  &__input {
+    background: #0d2b6d;
+    padding: 17px 20px;
+    color: $whiteColor;
+    &::placeholder {
+      color: $whiteColor;
+    }
+    &#phone {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    background-color: $orangeColor;
+    color: $whiteColor;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: rem(10);
+  }
+}
+
+.notation {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  column-gap: 16px;
+  padding: 12px 13px;
+  border-radius: rem(10);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: $mobileSmall) {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  &__image {
+    flex: 0 0 73px;
+    img {
+      max-width: 100%;
+    }
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue("flex-basis", 73, 50, 787.98);
+    }
+  }
+
+  &__text {
+  }
+
+  &__button {
+    flex: 0 0 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+    background: #0d2b6d;
+    border-radius: 10px;
+    color: $orangeColor;
+    font-size: rem(30);
+    line-height: 100%;
+    @media (max-width: $tablet) {
+      font-size: rem(20);
+    }
+    @media (max-width: $mobileSmall) {
+      flex: 1 1 100%;
+    }
+  }
+}
+.clients {
+  background-color: #0d2b6d;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 57px;
+  &__container {
+  }
+
+  &__slider {
+  }
+
+  &__wrapper {
+    @media (max-width: $mobile) {
+      max-width: 369px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    color: $whiteColor;
+  }
+
+  &__avatar {
+    flex: 0 0 115px;
+  }
+  &__body {
+    flex: 1 1 auto;
+    padding: 14.5px 1px 14.5px 0;
+  }
+  &__name {
+  }
+
+  &__cash {
+  }
+
+  &__saldo {
+  }
+}
+//====================================================================================================
+.problems {
+  padding-top: rem(125);
+  padding-bottom: rem(100);
+  @media (max-width: $mobile) {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+  &__wrapper {
+    position: relative;
+    padding-bottom: rem(40);
+    @media (min-width: $pc) {
+      padding-top: rem(68);
+      padding-bottom: rem(103);
+      max-width: 1380px;
+      margin: 0 auto;
+      background-color: rgba(243, 243, 243, 0.5);
+      box-shadow: 4px 4px 4px rgba(83, 83, 83, 0.25);
+    }
+  }
+  &__container {
+  }
+  &__button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: inline-block;
+    width: 84px;
+    aspect-ratio: 1;
+    background-color: #0d2b6d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 1s linear 0s infinite alternate circle-move;
+    img {
+      animation: 1s linear 0s infinite alternate arrow-move;
+    }
+  }
+
+  &__title {
+    font-family: "Orchidea Pro";
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: rem(60);
+    line-height: math.div(61, 60);
+    text-align: center;
+    margin-bottom: rem(40);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(277px, 1fr));
+    gap: 20px;
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item-title {
+    font-family: "Orchidea Pro";
+    font-weight: 500;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $orangeColor;
+    background-color: #0d2b6d;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-radius: rem(10);
+  }
+
+  &__item-text {
+  }
+}
+
+@keyframes arrow-move {
+  0% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(10%);
+  }
+}
+//========================================================================================================================================================

@@ -1,0 +1,68 @@
+//====================================================================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 175px;
+  color: $whiteColor;
+  padding-top: 62px;
+  padding-bottom: 62px;
+  z-index: 50;
+  transition: background-color 0.5s ease-in-out 0s;
+  &._header-scroll {
+    background-color: rgba(13, 43, 109, 0.6);
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    min-height: 123px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 50px;
+
+    @media (min-width: $mobile) {
+      column-gap: 76px;
+    }
+
+    @media (max-width: em(686)) {
+      column-gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    flex: 0 1 186px;
+    @media (max-width: em(686)) {
+      flex: 1 1 auto;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__offerta {
+    line-height: math.div(26, 20);
+    p {
+      max-width: 213px;
+    }
+
+    @media (min-width: em(686)) {
+      flex: 1 1 auto;
+    }
+    @media (min-width: $mobile) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__buttons {
+  }
+
+  &__button {
+  }
+}

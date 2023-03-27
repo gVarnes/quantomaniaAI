@@ -1,0 +1,27 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border: 1px solid $orangeColor;
+  border-radius: 0.5rem;
+  line-height: math.div(23, 20);
+  width: rem(220);
+  height: rem(50);
+
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $orangeColor;
+      color: #0d2b6d;
+    }
+  }
+}
+
+.iti__selected-dial-code {
+  color: $whiteColor;
+}
+
+.iti__flag {
+  background-image: url("@img/flags@2x.png");
+}
